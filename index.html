@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reutiliza Look</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>✨ Reutiliza Look 👗</h1>
+
+    <p>Seu estilo, suas roupas, novas possibilidades!</p>
+
+    <h2>💖 Crie looks incríveis sem gastar mais!</h2>
+
+    <p>
+        Descubra novas combinações usando as roupas
+        que você já tem no guarda-roupa.
+    </p>
+
+    <button>Começar a montar meus looks</button>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reutiliza Look | Seu estilo, suas regras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <a class="logo" href="#">✨ Reutiliza Look</a>
+
+        <nav>
+            <a href="#categorias">Meu guarda-roupa</a>
+            <a href="#inspiracoes">Inspirações</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-texto">
+                <span class="etiqueta">💖 MODA CRIATIVA E SUSTENTÁVEL</span>
+
+                <h1>Seu estilo.<br>
+                    Suas roupas.<br>
+                    <span>Novas possibilidades!</span>
+                </h1>
+
+                <p>
+                    Descubra combinações incríveis com as roupas
+                    que você já tem. Reinvente seu estilo sem
+                    precisar gastar mais!
+                </p>
+
+                <a class="botao" href="#categorias">
+                    Explorar meu estilo ✨
+                </a>
+
+                <p class="frase-extra">
+                    ♻️ Mais criatividade, menos desperdício!
+                </p>
+            </div>
+
+            <div class="hero-visual">
+                <div class="adesivo adesivo-um">💗</div>
+                <div class="adesivo adesivo-dois">✨</div>
+
+                <div class="manequim">
+                    <span>👚</span>
+                    <span>👖</span>
+                    <span>👟</span>
+                    <p>Seu próximo look começa aqui!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categorias" id="categorias">
+            <div class="titulo-secao">
+                <span>ORGANIZE SUAS PEÇAS</span>
+                <h2>Seu guarda-roupa virtual 👗</h2>
+                <p>Escolha uma categoria para começar.</p>
+            </div>
+
+            <div class="grade-cartoes">
+                <article class="cartao cartao-rosa">
+                    <div class="icone-roupa">👚</div>
+                    <h3>Blusas</h3>
+                    <p>Regatas, camisetas e muito mais.</p>
+                    <span class="link-cartao">Explorar peças →</span>
+                </article>
+
+                <article class="cartao cartao-lilas">
+                    <div class="icone-roupa">👖</div>
+                    <h3>Calças e saias</h3>
+                    <p>Monte combinações diferentes.</p>
+                    <span class="link-cartao">Explorar peças →</span>
+                </article>
+
+                <article class="cartao cartao-azul">
+                    <div class="icone-roupa">👗</div>
+                    <h3>Vestidos</h3>
+                    <p>Encontre seu estilo favorito.</p>
+                    <span class="link-cartao">Explorar peças →</span>
+                </article>
+
+                <article class="cartao cartao-amarelo">
+                    <div class="icone-roupa">👟</div>
+                    <h3>Sapatos e acessórios</h3>
+                    <p>Os detalhes fazem a diferença.</p>
+                    <span class="link-cartao">Explorar peças →</span>
+                </article>
+            </div>
+        </section>
+
+<section class="meu-guarda-roupa" id="meu-guarda-roupa">
+    <div class="titulo-secao">
+        <span>SUAS PEÇAS, SUAS REGRAS</span>
+        <h2>Monte seu guarda-roupa 💖</h2>
+        <p>Adicione suas roupas ou escolha peças do nosso catálogo.</p>
+    </div>
+
+    <div class="painel-roupas">
+        <h3>📸 Adicionar minha própria roupa</h3>
+
+        <label for="nome-roupa">Nome da peça</label>
+        <input type="text" id="nome-roupa"
+            placeholder="Ex.: Minha camiseta rosa">
+
+        <label for="categoria-roupa">Categoria</label>
+        <select id="categoria-roupa">
+            <option value="Blusas">Blusas</option>
+            <option value="Calças e saias">Calças e saias</option>
+            <option value="Vestidos">Vestidos</option>
+            <option value="Sapatos e acessórios">Sapatos e acessórios</option>
+        </select>
+
+        <label for="foto-roupa">Escolha uma foto da roupa</label>
+        <input type="file" id="foto-roupa" accept="image/*">
+
+        <button type="button" id="adicionar-roupa">
+            Adicionar ao meu guarda-roupa ✨
+        </button>
+        <p id="mensagem-roupa" role="status"></p>
+    </div>
+
+    <div class="titulo-catalogo">
+        <h3>🌈 Ou escolha do catálogo</h3>
+        <p>Clique em uma peça para adicioná-la às suas roupas.</p>
+    </div>
+
+    <div class="catalogo-roupas">
+        <button type="button" class="peca-catalogo"
+            data-nome="Camiseta rosa" data-categoria="Blusas"
+            data-emoji="👚">
+            <span>👚</span>
+            <strong>Camiseta rosa</strong>
+            <small>Blusas · Adicionar +</small>
+        </button>
+
+        <button type="button" class="peca-catalogo"
+            data-nome="Camiseta básica" data-categoria="Blusas"
+            data-emoji="👕">
+            <span>👕</span>
+            <strong>Camiseta básica</strong>
+            <small>Blusas · Adicionar +</small>
+        </button>
+
+        <button type="button" class="peca-catalogo"
+            data-nome="Calça jeans" data-categoria="Calças e saias"
+            data-emoji="👖">
+            <span>👖</span>
+            <strong>Calça jeans</strong>
+            <small>Calças e saias · Adicionar +</small>
+        </button>
+
+        <button type="button" class="peca-catalogo"
+            data-nome="Vestido" data-categoria="Vestidos"
+            data-emoji="👗">
+            <span>👗</span>
+            <strong>Vestido</strong>
+            <small>Vestidos · Adicionar +</small>
+        </button>
+
+        <button type="button" class="peca-catalogo"
+            data-nome="Tênis" data-categoria="Sapatos e acessórios"
+            data-emoji="👟">
+            <span>👟</span>
+            <strong>Tênis</strong>
+            <small>Sapatos · Adicionar +</small>
+        </button>
+
+        <button type="button" class="peca-catalogo"
+            data-nome="Bolsa" data-categoria="Sapatos e acessórios"
+            data-emoji="👜">
+            <span>👜</span>
+            <strong>Bolsa</strong>
+            <small>Acessórios · Adicionar +</small>
+        </button>
+    </div>
+
+    <div class="titulo-catalogo">
+        <h3>🩷 Minhas roupas cadastradas</h3>
+        <p id="total-roupas">Você ainda não adicionou nenhuma peça.</p>
+    </div>
+
+    <div id="lista-roupas" class="lista-roupas"></div>
+</section>
+<section class="gerador-look" id="gerador-look">
+<section class="favoritos-look" id="favoritos-look">
+    <div class="titulo-secao">
+        <span class="etiqueta">💖 SEUS LOOKS PREFERIDOS</span>
+        <h2>Meus looks favoritos</h2>
+        <p>Guarde as combinações que mais combinam com você!</p>
+    </div>
+
+    <div id="lista-favoritos" class="lista-favoritos">
+        <p class="favoritos-vazio">
+            Seus looks favoritos aparecerão aqui. 💕
+        </p>
+    </div>
+</section>
+   
+    <div class="titulo-secao">
+        <span class="etiqueta">✨ SEU ESTILO, SUAS REGRAS</span>
+        <h2>Monte seu look!</h2>
+        <p>Deixe a criatividade escolher uma combinação para você.</p>
+    </div>
+
+    <div class="painel-gerador">
+        <div class="gerador-texto">
+            <h3>👗 O que vamos vestir hoje?</h3>
+            <p>Use as peças do seu guarda-roupa para descobrir novas combinações.</p>
+
+            <button id="gerar-look" class="botao-gerar">
+                ✨ Gerar meu look
+            </button>
+
+            <button id="limpar-look" class="botao-limpar">
+                🔄 Limpar combinação
+            </button>
+        </div>
+
+        <div id="resultado-look" class="resultado-look">
+            <div class="mensagem-inicial-look">
+                <span>👚 👖 👟</span>
+                <p>Seu próximo look incrível aparecerá aqui!</p>
+            </div>
+        </div>
+
+        <p id="mensagem-look" class="mensagem-look"></p>
+    </div>
+</section>
+        <section class="inspiracoes" id="inspiracoes">
+            <div class="titulo-secao">
+                <span>UM TOQUE DE CRIATIVIDADE</span>
+                <h2>Inspire-se para criar! 🌈</h2>
+                <p>Três ideias para aproveitar melhor suas roupas.</p>
+            </div>
+
+            <div class="grade-cartoes">
+                <article class="dica">
+                    <span>🌸</span>
+                    <h3>Look casual</h3>
+                    <p>Experimente combinar uma camiseta com jeans e tênis.</p>
+                </article>
+
+                <article class="dica">
+                    <span>🎨</span>
+                    <h3>Mix de cores</h3>
+                    <p>Teste cores diferentes e descubra novas combinações.</p>
+                </article>
+
+                <article class="dica">
+                    <span>♻️</span>
+                    <h3>Repita com estilo</h3>
+                    <p>Use a mesma peça em looks diferentes e criativos.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>💖 Reutiliza Look — vista sua criatividade!</p>
+        <p>Seu estilo não precisa de compras novas para brilhar.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

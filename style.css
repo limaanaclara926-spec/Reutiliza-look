@@ -1,0 +1,797 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff0f7, #eee8ff, #e3f8ff);
+    color: #35213f;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    color: #d6339b;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+body > p:first-of-type {
+    color: #80558c;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* CARTÃO PRINCIPAL */
+h2 {
+    color: #8739bc;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+h2 + p {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* BOTÃO */
+button {
+    background: linear-gradient(90deg, #f04da8, #9b5de5);
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px #dba5e8;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px #c995df;
+}
+
+/* CABEÇALHO */
+.topo {
+    max-width: 1150px;
+    margin: 0 auto 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #d6339b;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topo nav {
+    display: flex;
+    gap: 24px;
+}
+
+.topo nav a {
+    color: #684477;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topo nav a:hover {
+    color: #d6339b;
+}
+
+/* DESTAQUE INICIAL */
+.hero {
+    max-width: 1150px;
+    margin: 0 auto 65px;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    box-shadow: 0 12px 35px rgba(151, 93, 191, 0.10);
+}
+
+.etiqueta,
+.titulo-secao > span {
+    color: #bd3794;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 4vw, 54px);
+    line-height: 1.15;
+    margin: 20px 0;
+    color: #46275e;
+}
+
+.hero h1 span {
+    color: #d6339b;
+}
+
+.hero-texto > p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background: linear-gradient(90deg, #f04da8, #9b5de5);
+    color: white;
+    text-decoration: none;
+    padding: 16px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px #dba5e8;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+}
+
+.hero-texto .frase-extra {
+    color: #80558c;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* ILUSTRAÇÃO DE ROUPAS */
+.hero-visual {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manequim {
+    width: 100%;
+    max-width: 340px;
+    min-height: 250px;
+    background: linear-gradient(145deg, #ffe1f1, #e5d9ff);
+    border-radius: 45% 45% 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(153, 91, 190, 0.13);
+}
+
+.manequim > span {
+    font-size: 65px;
+    background: white;
+    border-radius: 22px;
+    padding: 12px;
+}
+
+.manequim p {
+    width: 100%;
+    color: #71418b;
+    font-weight: bold;
+    text-align: center;
+}
+
+.adesivo {
+    position: absolute;
+    z-index: 1;
+    background: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 25px;
+    box-shadow: 0 5px 20px #d9bce8;
+}
+
+.adesivo-um {
+    top: 5px;
+    right: 5px;
+}
+
+.adesivo-dois {
+    bottom: 5px;
+    left: 0;
+}
+
+/* SEÇÕES */
+.categorias,
+.inspiracoes {
+    max-width: 1150px;
+    margin: 0 auto 65px;
+}
+
+.titulo-secao {
+    margin-bottom: 28px;
+}
+
+.titulo-secao h2 {
+    margin-top: 10px;
+}
+
+.titulo-secao p {
+    margin-top: 10px;
+}
+
+/* CARTÕES DE CATEGORIAS */
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    text-align: left;
+}
+
+.cartao {
+    padding: 24px 20px;
+    border-radius: 23px;
+    border: 2px solid white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover,
+.dica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(107, 64, 132, 0.13);
+}
+
+.cartao-rosa {
+    background: #ffe1f0;
+}
+
+.cartao-lilas {
+    background: #e9ddff;
+}
+
+.cartao-azul {
+    background: #dcf2ff;
+}
+
+.cartao-amarelo {
+    background: #fff1c9;
+}
+
+.icone-roupa {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.cartao h3,
+.dica h3 {
+    color: #492c60;
+    margin-bottom: 10px;
+}
+
+.cartao p,
+.dica p {
+    color: #725d7e;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.link-cartao {
+    display: inline-block;
+    margin-top: 18px;
+    color: #963a9f;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* CARTÕES DE INSPIRAÇÃO */
+.inspiracoes .grade-cartoes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dica {
+    background: white;
+    padding: 25px;
+    border-radius: 22px;
+    border: 2px solid #f3e6fb;
+    transition: 0.2s;
+}
+
+.dica > span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+/* RODAPÉ */
+footer {
+    padding: 30px 15px;
+    background: #f5e6ff;
+    border-radius: 20px;
+    color: #80558c;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* ADAPTAÇÃO PARA TELAS MENORES */
+@media (max-width: 850px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .grade-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .topo {
+        flex-direction: column;
+    }
+
+    .topo nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 24px 18px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .grade-cartoes,
+    .inspiracoes .grade-cartoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ETAPA 4 - CADASTRO DE ROUPAS */
+.meu-guarda-roupa {
+    max-width: 1150px;
+    margin: 0 auto 65px;
+    scroll-margin-top: 25px;
+}
+
+.painel-roupas {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    padding: 28px;
+    background: white;
+    border: 2px solid #f3dafa;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(151, 93, 191, 0.09);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.painel-roupas h3 {
+    color: #8739bc;
+    margin-bottom: 8px;
+}
+
+.painel-roupas label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #684477;
+}
+
+.painel-roupas input,
+.painel-roupas select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dec9ed;
+    border-radius: 12px;
+    background: #fffaff;
+    color: #35213f;
+    font: inherit;
+}
+
+.painel-roupas input:focus,
+.painel-roupas select:focus {
+    outline: 2px solid #d6339b;
+}
+
+.painel-roupas button {
+    margin-top: 8px;
+}
+
+#mensagem-roupa {
+    color: #8739bc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.titulo-catalogo {
+    margin: 35px 0 20px;
+}
+
+.titulo-catalogo h3 {
+    color: #8739bc;
+    margin-bottom: 10px;
+}
+
+.titulo-catalogo p {
+    color: #80558c;
+}
+
+.catalogo-roupas,
+.lista-roupas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    text-align: left;
+}
+
+.peca-catalogo {
+    background: white;
+    border: 2px solid #f0def8;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: #492c60;
+    box-shadow: 0 5px 15px rgba(151, 93, 191, 0.06);
+    transition: 0.2s;
+}
+
+.peca-catalogo:hover {
+    transform: translateY(-4px);
+    border-color: #d6339b;
+}
+
+.peca-catalogo span {
+    font-size: 48px;
+}
+
+.peca-catalogo strong {
+    font-size: 16px;
+}
+
+.peca-catalogo small {
+    color: #8739bc;
+}
+
+.roupa-card {
+    background: white;
+    padding: 18px;
+    border-radius: 20px;
+    border: 2px solid #f0def8;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.roupa-card img,
+.roupa-card .roupa-emoji {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #f8efff;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+.roupa-card .roupa-emoji {
+    font-size: 65px;
+    text-align: center;
+    align-content: center;
+}
+
+.roupa-card h4 {
+    color: #492c60;
+    margin-bottom: 8px;
+}
+
+.roupa-card p {
+    font-size: 13px;
+    color: #80558c;
+    margin-bottom: 12px;
+}
+
+.roupa-card button {
+    width: 100%;
+    padding: 11px;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.roupa-card .remover-roupa {
+    background: #fff0f4;
+    color: #b42355;
+    box-shadow: none;
+}
+
+@media (max-width: 700px) {
+    .catalogo-roupas,
+    .lista-roupas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .painel-roupas {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .catalogo-roupas,
+    .lista-roupas {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* GERADOR DE LOOKS */
+
+.gerador-look {
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #fff0f6, #f3e8ff);
+    border-radius: 25px;
+    margin: 35px auto;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #a21caf;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.gerador-look h2 {
+    color: #7e22ce;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.gerador-look p {
+    color: #66536f;
+    line-height: 1.6;
+}
+
+.painel-gerador {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px #7e22ce15;
+}
+
+.gerador-texto {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gerador-texto h3 {
+    color: #7e22ce;
+    font-size: 22px;
+}
+
+.botao-gerar,
+.botao-limpar {
+    display: inline-block;
+    margin: 8px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-gerar {
+    background: #a855f7;
+    color: white;
+}
+
+.botao-gerar:hover {
+    background: #7e22ce;
+    transform: translateY(-2px);
+}
+
+.botao-limpar {
+    background: #fce7f3;
+    color: #9d174d;
+}
+
+.botao-limpar:hover {
+    background: #fbcfe8;
+}
+
+.resultado-look {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.mensagem-inicial-look {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px 10px;
+    background: #faf5ff;
+    border: 2px dashed #d8b4fe;
+    border-radius: 18px;
+}
+
+.mensagem-inicial-look span {
+    font-size: 38px;
+}
+
+.mensagem-look {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.peca-look {
+    text-align: center;
+    padding: 15px;
+    background: #fff7fb;
+    border: 1px solid #f3d5ed;
+    border-radius: 16px;
+}
+
+.peca-look img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.emoji-look {
+    font-size: 65px;
+    padding: 20px 0;
+}
+
+.peca-look h4 {
+    color: #7e22ce;
+    margin: 10px 0 5px;
+}
+
+.peca-look p {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+@media (max-width: 550px) {
+    .gerador-look {
+        padding: 35px 5%;
+    }
+
+    .painel-gerador {
+        padding: 18px;
+    }
+
+    .gerador-look h2 {
+        font-size: 26px;
+    }
+
+    .botao-gerar,
+    .botao-limpar {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    .resultado-look {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .peca-look img {
+        height: 140px;
+    }
+}
+
+/* LOOKS FAVORITOS */
+
+.favoritos-look {
+    padding: 45px 8%;
+}
+
+.lista-favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.favoritos-vazio {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 25px;
+    color: #9d174d;
+    background: #fff0f6;
+    border-radius: 15px;
+}
+
+.favorito-card {
+    background: white;
+    border: 1px solid #f3d5ed;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 5px 15px #7e22ce10;
+}
+
+.favorito-card h3 {
+    color: #7e22ce;
+    margin-top: 0;
+}
+
+.favorito-card .pecas-favoritas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.favorito-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.favorito-card .emoji-look {
+    font-size: 35px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.botao-favorito,
+.botao-remover-favorito {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao-favorito {
+    background: #fce7f3;
+    color: #9d174d;
+}
+
+.botao-remover-favorito {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+@media (max-width: 550px) {
+    .favoritos-look {
+        padding: 35px 5%;
+    }
+}
